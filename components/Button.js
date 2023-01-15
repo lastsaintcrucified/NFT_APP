@@ -15,6 +15,7 @@ export const CircleButton = ({ imageUrl, handlePress, ...props }) => {
         ...SHADOWS.light,
         ...props,
       }}
+      onPress={handlePress}
     >
       <Image
         source={imageUrl}
