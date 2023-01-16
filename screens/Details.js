@@ -12,6 +12,7 @@ import {
   CircleButton,
   RectButton,
   DetailsBid,
+  DetailsDesc,
 } from "../components";
 import { SubInfo, EthPrice, NFTTitle } from "../components/SubInfo";
 
@@ -72,6 +73,12 @@ const Details = ({ route, navigation }) => {
           <>
             <DetailsHeader data={data} navigation={navigation} />
             <SubInfo />
+            <View style={{ padding: SIZES.font }}>
+              <DetailsDesc data={data} />
+              {data.bids.length > 0 && (
+                <Text style={{ fontFamily: FONTS.semiBold }}>Current bids</Text>
+              )}
+            </View>
           </>
         )}
       />
